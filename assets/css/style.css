@@ -1,0 +1,457 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #1A1A1A;
+    --negro: #000000;
+}
+
+/**Globales**/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;  /* 1rem = 10px */
+}
+
+body{
+    font-size: 16px; /* 1rem = 10px */
+    background-color: var(--negro);
+}
+
+.container__body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 33rem 20rem 8rem auto auto;
+    grid-template-areas: "navBar navBar navBar"
+                         "container__header container__header container__header"
+                         "navBar2 navBar2 navBar2"
+                         "container__main container__main container__main"
+                         "container__footer container__footer container__footer";
+}
+
+
+/**Menu de navegacion**/
+
+.navBar{
+    grid-area: navBar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar__buscador{
+    padding: 1rem;
+   
+}
+
+.navBar__buscador input{
+    width: 28rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+.navBar__buscador a{
+    text-decoration: none;
+    padding: .5rem;
+    border: none;
+    border-radius: .7rem;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+
+
+.navBar__menu{
+    list-style: none;
+}
+
+.navBar__menu li{
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.navBar__menu li a{
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: #ffffff solid .1rem;
+    color: var(--blanco);
+    
+}
+/**Header**/
+
+.container__header{
+    grid-area: container__header;
+    background-image: url(../img/Estilos-de-moda-Cuál-es-el-tuyo\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container__header div{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7); 
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/**Navegacion 2**/
+
+.navBar2{
+    grid-area: navBar2;
+    background-color: var(--oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navBar2 div ul{
+    display: flex;
+    list-style: none;
+}
+
+.navBar2 div ul li{
+    margin: 2rem;
+}
+
+.navBar2 div ul li a{
+    text-decoration: none;
+    background-color: var(--blanco);
+    border: none;
+    border-radius: 4rem;
+    color: var(--negro);
+    padding: 1rem;
+}
+/**Main**/
+
+.container__main{
+    grid-area: container__main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 10rem;
+
+    
+}
+
+.container__main__productos{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    position: relative;
+    display: grid;
+}
+
+
+.container__main__producto{
+    display: flex;
+}
+
+.container__main__producto img{
+    margin-top: 3rem;
+    width: 18rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 5rem;
+}
+
+.add-favoritos {
+    position: absolute;
+    left: 2rem;
+    bottom: 6rem;
+    font-size: 3rem;
+    background-color: none;
+    border-radius: 30%;
+    border: none;
+}
+
+
+
+/**Footer**/
+
+.container__footer{
+    grid-area: container__footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--oscuro);
+}
+
+.container__footer ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container__footer ul li{
+
+ margin-top: 1rem;
+ margin-bottom: 1rem;
+
+}
+
+.container__footer ul li a{
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 1rem;
+    margin: 1rem;   
+}
+
+.container__footer p {
+    padding: 1rem;
+}
+
+.container__footer .iconos__footer{
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.container__footer .iconos__footer a{
+    margin: 1rem;
+    color: var(--blanco);
+}
+
+/**Modificadores**/
+
+.favorito-avtivo{
+    color: red;
+}
+
+
+/**Pagina Carrito**/
+
+.container__carrito{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto-carrito{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem ;
+    margin-bottom: 2rem;
+    width: 60%;
+    position: relative;
+
+}
+.producto-carrito img{
+    border-radius: 5rem;
+    width: 30rem;
+    height: 50rem;
+    object-fit:cover;
+}
+
+.producto-carrito div{
+
+   margin-left: 3rem;
+   line-height: 6rem;
+}
+
+.producto-carrito button{
+    background: none;
+    border: none;
+    color: #ffffff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+}
+
+.btn-comprarCarrito{
+    margin: 5rem;
+}
+.btn-comprarCarrito input{
+    padding: 1rem;
+    background-color: var(--blanco);
+    border: none;
+    border-radius: 5rem;
+}
+
+
+
+.info_productos button{
+    background-color: var(--negro);
+    padding: 2rem;
+    border-radius: 50%;
+
+}
+
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    color:#ffffff;
+    margin-top: 5rem;
+}
+
+
+/**Pagina Login**/
+
+.contailer_login{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--oscuro);
+    border-radius: 8rem;
+    padding: 5rem;
+    align-items: center;
+}
+
+.contailer_login form div{
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contailer_login form div .ingreso__user{
+    padding: 1.5rem;
+    border: none;
+    border-radius: 8rem;
+}
+
+.btn{
+    padding: 1rem;
+    background-color: var(--blanco);
+    border: none;
+    border-radius: 8rem;
+}
+
+.contailer_login a{
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.contailer_login form div input[type=checkbox]{
+    margin-right: 1rem;
+}
+
+/**Pagina Perfil**/ 
+
+.container__perfil{
+    background-color: var(--oscuro);
+    width: 85%;
+    border-radius: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container__img__perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    margin: 3rem;    
+}
+
+.container__perfil .container__img__perfil img{
+width: 50%;
+margin-bottom: 1rem;
+border-radius: 8rem;
+display: flex;
+}
+
+.container__perfil .container__info__perfil ul{
+    margin: 3rem;
+    line-height: 4rem;
+    list-style: none;
+}
+
+.btn__actualizar__perfil input{
+    padding: 1rem;
+    border: none;
+    border-radius: 8rem;
+    background-color: var(--blanco);
+    margin-bottom: 3rem;
+}
+
+/**Responsive Tablet**/
+
+@media (min-width: 768px) {
+    .container__body{
+        grid-template-rows: 20rem 35rem 8rem auto auto;
+        
+    }
+    .navBar__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .navBar__menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .navBar2 div ul li{
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    
+}
+
+
+@media (min-width: 1024px) {
+    .container__body{
+        grid-template-rows: 25rem 35rem 8rem auto auto;
+        
+    }
+    .navBar__menu li{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .navBar2 div ul li{
+        margin-right: 7rem;
+        margin-left: 7rem;
+    }
+    .container__img__perfil{
+        flex-direction: row;
+    }
+    .container__img__perfil h2{
+
+        margin-left: 3rem;
+
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .container__body{
+        grid-template-rows: 30rem 35rem 8rem auto auto;
+        
+    }
+    .navBar__menu li{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .producto-carrito{
+        flex-direction: row;
+        
+    }
+
+    .producto-carrito img{
+        object-fit: cover;
+    }
+
+}
