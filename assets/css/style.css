@@ -20,66 +20,9 @@ body{
     background-color: var(--negro);
 }
 
-.container__body{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 33rem 20rem 8rem auto auto;
-    grid-template-areas: "navBar navBar navBar"
-                         "container__header container__header container__header"
-                         "navBar2 navBar2 navBar2"
-                         "container__main container__main container__main"
-                         "container__footer container__footer container__footer";
-}
-
-
-/**Menu de navegacion**/
-
-.navBar{
-    grid-area: navBar;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.navBar__buscador{
-    padding: 1rem;
-   
-}
-
-.navBar__buscador input{
-    width: 28rem;
-    height: 3rem;
-    border-radius: 1rem;
-}
-.navBar__buscador a{
-    text-decoration: none;
-    padding: .5rem;
-    border: none;
-    border-radius: .7rem;
-    background-color: var(--blanco);
-    color: var(--negro);
-}
 
 
 
-.navBar__menu{
-    list-style: none;
-}
-
-.navBar__menu li{
-    padding: 1rem;
-    text-align: center;
-
-}
-
-.navBar__menu li a{
-    text-decoration: none;
-    padding: 1rem;
-    border-bottom: #ffffff solid .1rem;
-    color: var(--blanco);
-    
-}
 /**Header**/
 
 .container__header{
