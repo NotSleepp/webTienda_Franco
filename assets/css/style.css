@@ -46,7 +46,11 @@ body{
     font-size: 18px;
 }
 
+/**Header**/
 
+.carousel-caption h5{
+    font-size: 10px;
+}
 
 /**Main**/
 
