@@ -46,56 +46,41 @@ body{
     font-size: 18px;
 }
 
-/**Header**/
 
-.carousel-caption h5{
-    font-size: 10px;
-}
+
 
 /**Main**/
 
-.container__main{
-    grid-area: container__main;
+.container_main{
     display: flex;
-    flex-wrap: wrap;
+    
+    flex-wrap:wrap;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
-    margin-bottom: 10rem;
-
-    
 }
 
-.container__main__productos{
-    display: flex;
-    flex-direction: column;
+.card{
+    width: 35rem;
     margin: 1rem;
-    position: relative;
-    display: grid;
 }
 
-
-.container__main__producto{
-    display: flex;
+.card a{
+    text-decoration: none;
+    color: var(--negro);
+    width: 30rem;
 }
 
-.container__main__producto img{
-    margin-top: 3rem;
-    width: 18rem;
-    height: 30rem;
+.card a img{
+    width: 100%;
     object-fit: cover;
-    border-radius: 5rem;
+    object-position: center center;
+
 }
 
-.add-favoritos {
-    position: absolute;
-    left: 2rem;
-    bottom: 6rem;
-    font-size: 3rem;
-    background-color: none;
-    border-radius: 30%;
-    border: none;
+.card-img-top{
+    height: 35rem;
 }
+
 
 
 
