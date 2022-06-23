@@ -25,11 +25,10 @@ body{
 .navbar{
     font-size: 18px;
     display: flex;
-
 }
 
 .navbar-brand{
-    font-size: 18px;
+    font-size: 30px;
 }
 
 .navbar div{
@@ -53,7 +52,6 @@ body{
 
 .container_main{
     display: flex;
-    
     flex-wrap:wrap;
     justify-content: center;
     align-items: center;
@@ -71,7 +69,7 @@ body{
 }
 
 .card a img{
-    width: 100%;
+    width: 34.8rem;
     object-fit: cover;
     object-position: center center;
 
