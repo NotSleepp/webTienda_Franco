@@ -230,7 +230,11 @@ body{
     width: 34.8rem;
     object-fit: cover;
     object-position: center center;
-    
+    transition: all 500ms ease-out;
+}
+
+.card a img:hover {
+    transform: scale(.8);
 }
 
 .card-img-top{
