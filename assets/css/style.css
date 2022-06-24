@@ -19,6 +19,166 @@ body{
     background-color: var(--negro);
 }
 
+/**primera version de la pagina sin boostrap para que funcionen las paginas a las qu eno le agregue esta herramienta**/
+
+.container__body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 33rem 20rem 8rem auto auto;
+    grid-template-areas: "navBar navBar navBar"
+                         "container__header container__header container__header"
+                         "navBar2 navBar2 navBar2"
+                         "container__main container__main container__main"
+                         "container__footer container__footer container__footer";
+}
+
+
+/**Menu de navegacion**/
+
+.navBar{
+    grid-area: navBar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar__buscador{
+    padding: 1rem;
+   
+}
+
+.navBar__buscador input{
+    width: 28rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+.navBar__buscador a{
+    text-decoration: none;
+    padding: .5rem;
+    border: none;
+    border-radius: .7rem;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+
+
+.navBar__menu{
+    list-style: none;
+}
+
+.navBar__menu li{
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.navBar__menu li a{
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: #ffffff solid .1rem;
+    color: var(--blanco);
+    
+}
+/**Header**/
+
+.container__header{
+    grid-area: container__header;
+    background-image: url(../img/1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container__header div{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7); 
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/**Navegacion 2**/
+
+.navBar2{
+    grid-area: navBar2;
+    background-color: var(--oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navBar2 div ul{
+    display: flex;
+    list-style: none;
+}
+
+.navBar2 div ul li{
+    margin: 2rem;
+}
+
+.navBar2 div ul li a{
+    text-decoration: none;
+    background-color: var(--blanco);
+    border: none;
+    border-radius: 4rem;
+    color: var(--negro);
+    padding: 1rem;
+}
+
+/**Main anterior**/
+
+.container__main_anterior{
+    grid-area: container__main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 10rem;
+
+    
+}
+
+.container__main__productos{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    position: relative;
+    display: grid;
+}
+
+
+.container__main__producto{
+    display: flex;
+}
+
+.container__main__producto img{
+    margin-top: 3rem;
+    width: 18rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 5rem;
+}
+
+.add-favoritos {
+    position: absolute;
+    left: 2rem;
+    bottom: 6rem;
+    font-size: 3rem;
+    background-color: none;
+    border-radius: 30%;
+    border: none;
+}
+
+
+
 
 /**navbar**/
 
